@@ -16,7 +16,7 @@ import {
 
 export default {
   // 异步获取地址信息的异步action
-  async getAdress({commit,state}){
+  async getAddress({commit,state}){
     //第一步发送ajax请求
     const {longitude,latitude} = state;
     const result = await reqAddress(latitude,longitude);
@@ -27,7 +27,7 @@ export default {
     }
   },
   // 异步获取食品分类列表的异步action
-  async getFoodCategory({commit}){
+  async getFoodCategorys({commit}){
     //发送ajax请求
     const result = await reqFoodCategorys();
     const footCategorys = result.data;

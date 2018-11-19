@@ -9,12 +9,12 @@ import {
 
 export default {
   [REQ_ADDRESS](state, {address}){
-    state(address)
+    state.address=address;
   },
   [REQ_FOODCATEGORYS](state, {categorys}){
-    state(categorys)
+    state.categorys=categorys;
   },
   [REQ_SHOPS](state,{shops}){
-    state(shops)
+    state.shops=shops;
   }
 }

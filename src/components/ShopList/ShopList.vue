@@ -23,21 +23,21 @@
                   <span class="star-item off"></span>
                 </div>
                 <div class="rating_section">
-                  3.6
+                  {{shop.rating}}
                 </div>
                 <div class="order_section">
-                  月售106单
+                  月售{{shop.recent_order_num}}单
                 </div>
               </section>
               <section class="shop_rating_order_right">
-                <span class="delivery_style delivery_right">硅谷专送</span>
+                <span class="delivery_style delivery_right"> {{shop.delivery_mode.text}}</span>
               </section>
             </section>
             <section class="shop_distance">
               <p class="shop_delivery_msg">
-                <span>¥20起送</span>
+                <span>¥{{shop.float_minimum_order_amount}}起送</span>
                 <span class="segmentation">/</span>
-                <span>配送费约¥5</span>
+                <span>{{shop.piecewise_agent_fee.tips}}</span>
               </p>
             </section>
           </div>

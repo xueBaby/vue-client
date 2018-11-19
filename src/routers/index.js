@@ -8,6 +8,8 @@ import Msite from '../pages/Msite/Msite.vue'
 import Search from '../pages/Search/Search.vue'
 import Order from '../pages/Order/Order.vue'
 import Profile from '../pages/Profile/Profile.vue'
+import Login from '../pages/Login/Login.vue'
+
 //声明使用VueRouter
 Vue.use(VueRouter);
 export default new VueRouter({
@@ -17,27 +19,39 @@ export default new VueRouter({
   routes: [
     {
       path: '/msite',
-      component: Msite
-    },
-    {
-      path: '/msite',
-      component: Msite
+      component: Msite,
+      meta: { //路由元信息 默认是
+        showFoot: true
+      }
     },
     {
       path: '/search',
-      component: Search
+      component: Search,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path: '/order',
-      component: Order
+      component: Order,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path: '/profile',
-      component: Profile
+      component: Profile,
+      meta: {
+        showFoot: true
+      }
+    },
+    {
+      path: '/login',
+      component: Login
     },
     {
       path: '/',
-      redirect: Msite // 默认显示的路由组件首页 重定向
+      redirect: '/msite' // 默认显示的路由组件首页 重定向
     }
   ]
   
